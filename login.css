@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Degradado de fondo */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fondoAnimado 10s infinite alternate; /* Animación del fondo */
+}
+
+/* Animación de fondo */
+@keyframes fondoAnimado {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Estilo del encabezado */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos del formulario */
+#formulario_login {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.5s ease-out; /* Animación al cargar el formulario */
+}
+
+/* Animación de entrada */
+@keyframes popIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Estilos de etiquetas y entradas */
+label {
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #3498db; /* Borde azul */
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Efecto al enfocar */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #2980b9; /* Color de borde al enfocar */
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5); /* Sombra al enfocar */
+}
+
+/* Estilos de los botones */
+input[type="submit"],
+button {
+    background-color: #3498db; /* Color del botón */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto de transición */
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #2980b9; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Escala al pasar el mouse */
+}
+
+/* Estilo del enlace */
+a {
+    color: #fff; /* Color del enlace */
+    text-decoration: underline;
+    transition: color 0.3s ease; /* Transición de color */
+}
+
+a:hover {
+    color: #ffdd57; /* Color del enlace al pasar el mouse */
+}

@@ -1,0 +1,174 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    animation: cambiarImagenes 10s infinite; /* Cambia de imagen cada 10 segundos */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+/* Título principal */
+h1 {
+    color: #3498db;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+/* Sección de información del usuario */
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Foto de perfil */
+#fotoPerfil {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#fotoPerfil:hover {
+    transform: scale(1.1);
+}
+
+/* Nombre de usuario */
+#displayName {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Botones generales */
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Botones de publicar y modales */
+#publicar,
+#guardarPerfil,
+#guardarCambios {
+    background-color: #2ecc71;
+    margin-top: 10px;
+}
+
+#publicar:hover,
+#guardarPerfil:hover,
+#guardarCambios:hover {
+    background-color: #27ae60;
+}
+
+/* Área de publicación */
+textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Sección de publicaciones */
+#publicaciones {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.publicacion {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.publicacion:hover {
+    transform: scale(1.02);
+}
+
+/* Contenedor de los botones editar y eliminar */
+.acciones {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button.editar-publicacion,
+button.eliminar-publicacion {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+button.editar-publicacion:hover,
+button.eliminar-publicacion:hover {
+    color: #2980b9;
+}
+
+/* Iconos */
+button i {
+    margin-right: 8px;
+}
+
+/* Estilos de los modales */
+.modal-content {
+    border-radius: 8px;
+    border: none;
+}
+
+.modal-header {
+    background-color: #3498db;
+    color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Botones dentro del modal */
+.modal-footer button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animación de fondo */
+@keyframes cambiarImagenes {
+    0% {
+        background-image: url('imagen3.jpg');
+    }
+    50% {
+        background-image: url('imagen2.jpg');
+    }
+    100% {
+        background-image: url('imagen3.jpg');
+    }
+}
